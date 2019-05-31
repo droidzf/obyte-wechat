@@ -1,0 +1,54 @@
+<!--pages/profile/kyc.wxml-->
+<view style='padding: 20rpx;'>
+  <button bindtap='aachooseImage'>拍照/选择图片</button>
+  <view  style='text-align: center'>
+    <view>
+      <view><image src='{{imgPath}}'  mode='aspectFit' ></image></view>
+      <view  wx:if='{{!userSeletPhoto}}' style='font-size: 26rpx;text-align: left;color:red'>
+    　　<view>1. 建议提交第二代居民身份证的正面彩色图片，避免提交黑白图片或复印件。</view>
+        <view>2. 建议身份证图片保证完整，避免裁剪边角框、有污迹、划痕或折痕。</view>
+        <view>3. 身份证图片中文字、证件号码尽量清晰可辨，建议不要涂改或在名字和证件号文字上添加水印。</view>
+       
+        <view>4. 图片文件大小小于1M字节。</view>
+      </view>
+    </view>
+    <view wx:if='{{userSeletPhoto}}'>
+        <button bindtap='undateFile'>开始识别</button>
+    </view>
+  </view>
+  <view class='user_info' wx:if='{{ address }}'>
+  <view class='tips'>
+    请在手机客户端-“对话”-“APP Store”中添加“XKYC认证”，并发送请求id与您的钱包地址绑定
+  </view>
+    <view class="user_info_box">
+      <view class='user_info_title'>姓  名：</view>
+      <view class='user_info_value'>{{name}}</view>
+    </view>
+    <view class="user_info_box">
+      <view class='user_info_title'>性  别：</view>
+      <view class='user_info_value'>{{ sex }}</view>
+    </view>
+    <view class="user_info_box">
+      <view class='user_info_title'>民  族：</view>
+      <view class='user_info_value'>{{ nationality }}</view>
+    </view>
+    <view class="user_info_box">
+      <view class='user_info_title'>出生年月：</view>
+      <view class='user_info_value'>{{ birth }}</view>
+    </view>
+    <view class="user_info_box">
+      <view class='user_info_title'>身份证号：</view>
+      <view class='user_info_value'>{{ num }}</view>
+    </view>
+    <view class="user_info_box">
+      <view class='user_info_title'>住  址：</view>
+      <view class='user_info_value'>{{address}}</view>
+    </view>
+    <view class="user_info_box">
+      <view class='user_info_title'>请求ID：</view>
+      <view class='user_info_value'><text  selectable='true'>{{requestId}}</text><button bindtap='copyrequestId' size='mini' class='copy'  data-requestId='{{ requestId }}'>点击复制</button></view>
+    </view>
+    
+  </view>
+
+</view>

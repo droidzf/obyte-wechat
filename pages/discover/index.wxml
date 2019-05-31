@@ -1,0 +1,8 @@
+<!--pages/discover/index.wxml-->
+<view class='container'>
+   <view class="list_li" wx:for="{{settingPageData}}" wx:key="{{index}}" data-url='{{item.url}}' bindtap='navigateToFun'>
+    <image class='user_icon' src='{{item.imgSrc}}' mode='aspectFit'></image>
+    <view class="user_text">{{item.text}}</view>
+    <view class='jiantou'>></view>
+  </view> 
+</view>

@@ -1,0 +1,32 @@
+/* pages/discover/index.wxss */
+
+page {
+  background-color: #f5f6f7;
+}
+ .list_li,.outLogin_list {
+  width: 750rpx;
+  padding: 30rpx 0rpx 30rpx 50rpx;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid #f5f6f7;
+  background-color: #fff;
+}
+.user_icon ,.jiantou{
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 40rpx;
+  color: #cccccc;
+  text-align: center;
+}
+.user_text {
+  flex: 1;
+} 
+.out_text {
+  color: #ff0000;
+}
+.outLogin_list {
+  position: fixed;
+  bottom: 60rpx;
+}

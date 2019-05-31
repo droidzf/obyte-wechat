@@ -1,0 +1,27 @@
+<!--pages/transaction/payment.wxml-->
+<view class='page'>
+  <view class='masthead'>
+    <view class='title'>Obyte</view>
+    <view class='subtitle'></view>
+  </view>
+
+  <view class='paycontainer'>
+    <view class='label'>支付地址</view>
+    <view class='inputbox'>
+      <input type='text' class="txtinput" value='{{paymentAddress}}' bindinput='paymentAddressFun'></input>
+      <view class='btnScan' bindtap='scanCodeFun'><image src="/images/scan.png" /></view>
+    </view>
+
+    <view class='label'>票据类型</view>
+    <view class='inputbox'>
+        <picker class="picker" bindchange="bindAssetChange" value="{{assetindex}}" range="{{assets}}" range-key="name">
+            <view class="weui-select weui-select_in-select-after"> {{assetname}} </view>
+        </picker>
+    </view>
+    <view class='label'>支付数量</view>
+    <view class='inputbox'><input type='digit' class="txtinput" value='{{paymentMoney}}' bindinput='paymentMoneyFun'></input></view>
+    <view>
+      <button class='payment_btn' disabled='{{ submitPaymentMoney }}' bindtap='submitPaymentMoney'>确认转账</button>
+    </view>
+  </view>
+</view>

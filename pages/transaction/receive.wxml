@@ -1,0 +1,39 @@
+<!--pages/transaction/receive.wxml-->
+<wxs module="filters" src="../../components/addmul.wxs"></wxs>
+
+
+<!--弹窗  -->
+<view class="drawer_screen" bindtap="powerDrawer" data-statu="close" wx:if="{{showModalStatus}}"></view>
+<!--content-->
+<!--使用animation属性指定需要执行的动画-->
+<view class="drawer_box" wx:if="{{showModalStatus}}">
+    <!--drawer content-->
+    <view class="drawer_title">设置金额</view>
+    <view class="drawer_content">
+        <!-- <form bindsubmit='formSubmit'> -->
+            <input name='back' type='digit' bindinput='inputMoney' class='fan'></input>
+            <button  bindtap='getGaetheringMoney' class='back_btn' data-statu="close">确认</button>
+        <!-- </form> -->
+    </view>
+</view>
+
+<view class='page'>
+  
+  <view class='qrcontainer'>
+    <view class='logo'><image src='/images/icon_dagx_x100.png'></image></view>
+    
+    <view class='topbanner'>
+      <view class='assetname'>bytes</view>
+      <view class='address' bindtap='copyWalletAddress'> {{ filters.toShortAddr(wallteAddress,12) }}<image class='iconcopy' src='/images/icons/copy2-x16.png' /></view>
+    </view>
+    <view class='qrbox'>
+      <view class='tipscan'>扫描二维码付款</view>
+      <view class='imgbox'><image src='{{ qrcodeImg }}'></image></view>
+      <view wx:if='{{ isgatheringMoney }}' class='gatheringMoney' >付款金额：{{ gatheringMoney }}</view>
+      <view class='setmoney'>
+        <view class='setmoney__item' bindtap="opentanchuang">设置金额</view>
+        <view class='setmoney__item' bindtap="clearMoney">清除金额</view>
+      </view>
+    </view>
+  </view>
+</view>

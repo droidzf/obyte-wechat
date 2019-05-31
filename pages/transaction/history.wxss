@@ -1,0 +1,128 @@
+/* pages/transaction/history.wxss */
+
+page{
+  background-color: #fff;
+}
+
+.masthead{
+  padding:30px;
+  color:#ffffff;
+  background: #4889c2;
+  background: -webkit-radial-gradient(#4889c2, #071e30);
+  background: -o-radial-gradient(#4889c2, #071e30);
+  background: -moz-radial-gradient(#4889c2, #071e30);
+  background: radial-gradient(#4889c2, #071e30);
+
+}
+
+.masthead .assetname{
+  text-align: center;
+  color:#ffffff;
+  font-size: large;
+  line-height: 1.5em;
+}
+ .masthead .balance{
+   text-align: center;
+   color:#f2f2f2;
+   font-size: small;
+   line-height: 1.5em;
+ }
+
+ .historylist{
+   background-color:#fff;
+   padding:8px;
+ }
+
+ .historylist .banner{
+  color:#706f75;
+  font-size: medium;
+  line-height: 2em;
+  font-weight: 400;
+  background-color:#fff;
+  border-bottom: solid 1px #e0e0e0;
+  padding-left: 3px;
+ }
+
+ .historylist .nodata{
+   padding:80px 40px;
+   text-align: center;
+   color: #f2f2f2;
+ }
+
+ .historylist .listdata{
+  height: 100rpx;
+
+  padding: 10rpx 25rpx; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  border-bottom: 1px solid #f5f6f7;
+ }
+
+.historylist .listdata .transicon{
+  width: 100rpx;
+}
+.historylist .listdata .transicon image{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.historylist .listdata .info{
+  width: 200rpx;
+}
+.historylist .listdata .info .text{
+  font-size: x-small;
+  color:#646464;
+  font-weight: 500;
+  line-height: 1.5em;
+}
+.historylist .listdata .info .date{
+  color: #ccc;
+  font-size: 25rpx;
+}
+
+.historylist .listdata .money {
+  flex: 1;
+  font-size: 28rpx;
+  text-align: right;
+  padding-right:6px;
+}
+
+ .buttomBar {
+    width: 100%;
+    position: fixed;
+    bottom: 0rpx;
+    background-color:#fafafa;
+    border-top: solid 1px #e0e0e0;
+
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+ }
+ .buttomBar .item{
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+  padding:10px;
+ }
+ .buttomBar .item .btn{
+    background: #e3c383;
+    border-color: #e3c383!important;
+    color: #0f0f0f!important;
+ }
+
+.buttomBar .item .btnReceive{
+    background: #ff5c00;
+    border-color: #e3c383!important;
+    color: #ffffff!important;
+ }
+
+.buttomBar .item .btnPayment{
+    background: #378df0;
+    border-color: #378df0!important;
+    color: #ffffff!important;
+ }
+
+ 

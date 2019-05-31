@@ -1,0 +1,83 @@
+/* pages/wallet/create.wxss */
+
+page{
+  background-color: #f8fafc;
+  
+}
+
+.btn {
+  width: 400rpx;
+  color: #fff;
+  background-color: #269fd6;
+  margin: 30rpx auto;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.warning {
+    padding: 40px;
+    padding-bottom: 20px;
+}
+
+.warning .title {
+  text-align: center;
+  font-size: large;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+
+.warning .desc {
+    margin-top: 5px;
+    color: #343f44;
+    text-align: left;
+    font-size:small;
+    font-weight: 400;
+    line-height: 1.6em;
+    word-spacing:6px;
+    word-break:break-word;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+.mnemonic{
+  padding:30px;
+}
+
+.mnemonic .title {
+  text-align: center;
+  font-size: large;
+  font-weight: 400;
+  letter-spacing: 10px;
+  padding-bottom: 0px;
+  margin: 10px;
+}
+
+.mnemonic .words {
+  background-color:#97d8f5;
+  padding:10px;
+  line-height: 1.6em;
+  word-spacing: 10px;
+  word-break:break-word;
+  text-align:  justify;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px rgba(60,64,67,.15);
+  box-sizing: border-box;
+}
+
+
+.mnemonic .tips{
+  font-size: small;
+  font-weight: 600;
+  margin-top:6px;
+}
+
+.btnOk {
+  width: 400rpx;
+  color: #fff;
+  background-color: #269fd6;
+  margin: 30rpx auto;
+}

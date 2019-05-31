@@ -1,0 +1,45 @@
+<!--pages/wallet/walletinfo.wxml-->
+<view class='page'>
+  <view class='page__hd'>
+    <view class='weui-flex'>
+      <view class='pagelogo'>
+        <image src="/images/icons/brown-wallet-x64.png" />
+      </view>
+      <view class='title'>票夹基本信息</view>
+    </view>
+
+  </view>
+
+  <view class="page__bd page__bd_spacing">
+    <view class="kind-list">
+      <view class='kind-list__item'>
+        <view class="weui-flex kind-list__item-hd" >
+          <view class="weui-flex__item">商票地址</view>
+          <image bindtap='copywallteaddress' class="kind-list__img" src="/images/icons/grey-copy-x32.png"></image>
+        </view>
+        <view class="weui-flex kind-list__item-bd">
+          <view class="weui-flex__item" style='font-size:small'><text selectable='true'>{{address}}</text></view>
+        </view>
+      </view>
+
+      <view class='kind-list__item'>
+        <view class="weui-flex kind-list__item-hd" >
+          <view class="weui-flex__item">公钥</view>
+        </view>
+        <view class="weui-flex kind-list__item-bd">
+          <view class="weui-flex__item" style='font-size:small'><text selectable='true'>{{publicKey}}</text></view>
+        </view>
+      </view>
+
+      <view class='kind-list__item'>
+        <view class="weui-flex kind-list__item-hd" >
+          <view class="weui-flex__item">余额</view>
+        </view>
+        <view class="weui-flex kind-list__item-bd">
+          <view class="weui-flex__item" style='font-size:small'><text selectable='true'>{{balance}}</text></view>
+        </view>
+      </view>
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/language/index.wxml-->
+<view class='container'>
+  <view class="list_li" wx:for="{{languages}}" wx:for-index="key" wx:key="index">
+    <view bindtap='setlan' data-bindex='{{key}}' class="user_text">{{key}} </view>
+  </view>
+</view>

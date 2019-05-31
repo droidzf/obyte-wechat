@@ -1,0 +1,20 @@
+/* pages/profile/kyc.wxss */
+.user_info{
+  padding: 100rpx 20rpx 50rpx 20rpx;
+}
+.user_info_box {
+  display: flex;
+  margin: 20rpx auto;
+  font-size: 36rpx;
+}
+.user_info_title {
+  width: 180rpx;
+  text-align: right;
+}
+.user_info_value {
+  flex: 1;
+  padding-left: 40rpx;
+  white-space: pre-wrap;
+  word-break: break-all;
+  color: #333;
+}

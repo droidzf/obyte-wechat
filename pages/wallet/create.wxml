@@ -1,0 +1,28 @@
+<!--pages/wallet/create.wxml-->
+<view class='page'>
+  <view class='warning'>
+    <view class='title'>安全警告</view>
+    <view class='desc'>创建obyte票夹时，会生成一组由12个英文单词组成的助记词，助记词相当于obyte票夹的口令或私钥，一定要妥善保管，在正式使用obyte票夹前，请务必将这些助记词备份到安全的地方，恢复obyte票夹找回你票据时需要用到。 </view>
+  </view>
+
+  <view wx:if="{{ !command }}">
+    <checkbox-group style='margin: 10rpx auto;color:#97d8f5' bindchange="checkboxChange">
+      <label class="checkbox" >
+        <checkbox color="#97d8f5" value="checkbox" />已阅读并同意
+      </label>
+    </checkbox-group>
+  </view>
+  <view wx:if="{{ !command }}">
+<button bindtap='createwallte' disabled='{{disabled_btn}}' class='btn'>创建票夹</button>
+  </view>
+
+  <view class='mnemonic' hidden="{{ !command }}">
+    <view class='title'>票夹助记词</view>
+    <view class='words'><text selectable='true'>{{ command }}</text></view>
+    <view class='tips'>创建成功！请牢记助记词，恢复票价时需要用到</view>
+    <view>
+      <button type="default" bindtap='naviToHome' class='btnOk'>确定</button>
+    </view>
+  </view>
+
+</view>

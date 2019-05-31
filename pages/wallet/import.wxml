@@ -1,0 +1,13 @@
+<!--pages/wallet/import.wxml-->
+<view class="container">
+  <view class='title'>请输入助记词</view>
+
+  <view class='inputs'>
+    <input wx:for='{{ confirm_type }}' wx:key='index' bindinput='bindinput' confirm-hold='true' data-key='{{ index }}' value='{{inputValue[index]}}' confirm-type="{{ confirm_type[index] }}"  focus='{{ focusIndex == index ? true : false }}' bindconfirm='bindNextConfirm'></input>
+  </view>
+  <button class='recover_btn' bindtap='recoverFun'>恢复票夹</button>
+  <view style='margin: 10px; margin-top:30px;margin-left:6px; color:#212121'>助记词由12个英文单词组成，示例：</view>
+  <view class='words'>
+    embrac outside clarify possible snake wise parent wealth confirm system reflect army
+  </view>
+</view>

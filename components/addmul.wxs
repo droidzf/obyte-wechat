@@ -1,0 +1,33 @@
+var filters = {
+  toFix: function (value,decimal) {
+    if(decimal == undefined)
+    {
+      decimal = 2;
+    }
+    console.log(value);
+    return value.toFixed(decimal)
+  },
+  toUpperCase: function(value)
+  {
+    return value.toUpperCase()
+  },
+  shortAddress: function(address,len)
+  {
+    if(address.length < 32)
+    {
+      return address;
+    }
+    if (len == undefined) {
+      len = 8;
+    }
+    var strA = address.substring(0, len);
+    var strB = address.substring(address.length - len, address.length);
+    return strA.concat('···', strB);
+  }
+  
+}
+module.exports = {
+  toFix: filters.toFix,
+  toUpperCase: filters.toUpperCase,
+  toShortAddr: filters.shortAddress
+}

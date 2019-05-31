@@ -1,0 +1,113 @@
+/* pages/wallet/mnemonic.wxss */
+
+page{
+  background-color: #f4f4f4;
+}
+
+.page__hd{
+  padding:40px;
+  color:#fff;
+  background-color: #ff7700;
+}
+
+.page__hd .pagelogo{
+  background-color: white;
+  opacity:0.8;
+  border-radius: 50%;
+  width:50px;
+  height: 50px;
+  text-align: center;
+}
+
+.page__hd .pagelogo image{
+  width:32px;
+  height:32px;
+  margin-top:8px;
+  display: inline-block;
+}
+.page__hd .title{
+  padding-left: 10px;
+  color:#fff;
+  font-size: larger;
+  text-align: left;
+}
+.page__hd .subtitle{
+  padding-left: 10px;
+  color:#fff;
+  font-size: small;
+  font-weight: bolder;
+  text-align: left;
+}
+
+.content{
+  margin-top:20px;
+}
+
+.content .prompt{
+	margin: 10px 0;
+	background-color: #fff;
+	border-radius: 2px;
+	overflow: hidden
+}
+
+.content .item-hd {
+	padding: 20px;
+  padding-top:10px;
+  padding-bottom: 10px;
+	-webkit-transition: opacity .3s;
+	transition: opacity .3s;
+  color:#555555
+  
+}
+
+.content .color-red{
+  color:#d63b1b;
+}
+
+.content .color-gold{
+  color: #0451a5;
+}
+
+.content .item-bd {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.kind-list__img {
+	width: 30px;
+	height: 30px
+}
+
+.content .item-bd text{
+  color: #555555;
+}
+
+.content .words{
+	margin: 10px 0;
+	background-color: #fff;
+	border-radius: 2px;
+	overflow: hidden;
+  border: 1px solid #e3e3e3;
+}
+
+.content .tips{
+  margin: 10px 0;
+  padding-left: 10px;
+  padding-right: 10px;
+  color:#8f8f8f;
+  font-size: x-small;
+}
+
+.btnImport{
+  background: #FF7700;
+  color: #fff;
+  width: 400rpx;
+  margin-top: 50rpx;
+}
+
+.weui-flex {
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	align-items: center
+}

@@ -1,0 +1,51 @@
+<!--pages/home/index.wxml-->
+<wxs module="filters" src="../../components/addmul.wxs"></wxs>
+
+<view class='page' wx:if='{{ haswallet }}'>
+  <view class='walletcard'>
+    <view class='list'>
+      <view class='item'>
+        <view bindtap='navigateToFun' data-url="/pages/transaction/receive"><image src='/images/icons/download-big-arrow.png'></image></view>
+        <text bindtap='navigateToFun' data-url="/pages/transaction/receive">{{language.receive}}</text>
+      </view>
+      <view class='item'>
+        <view><image src='/images/logo_dagx_x200.png'></image></view>
+        <text>{{filters.toFix(balance,4)}}</text>
+      </view>
+      <view class='item'>
+        <view bindtap='navigateToFun' data-url="/pages/transaction/payment"><image src='/images/icons/upload-big-arrow.png'></image></view>
+        <text bindtap='navigateToFun' data-url="/pages/transaction/payment">{{language.pay}}</text>
+      </view>
+    </view>
+
+    <view class='address' bindtap='copyWalletAddress'><text>{{language.address}} : </text>
+      {{ filters.toShortAddr(address,12) }} <image class='iconcopy' src='/images/icons/copy2-x16.png' />
+    </view>
+  </view>
+  <view class='subtitle'>{{language.allassets}}</view>
+  <view class='asset-container'>
+    <view class='list' wx:for='{{ assetlist }}' bindtap='showAssetHistory' wx:key='{{index}}' data-assetid='{{ item.assetid }}' data-name='{{ item.name }}' data-stable='{{ item.stable + item.pending }}'>
+      <view class='assetcoin'>
+        <image wx:if="{{ item.name == 'bytes' }}" src='/images/icon_dagx.png'></image>
+        <image wx:if="{{ item.name != 'bytes' }}" src='/images/icons/diamond-x64.png'></image>
+      </view>
+
+      <view class="weui-flex__item assetname">{{filters.toUpperCase(item.name || item.assetid)}}</view>
+      <view class="assetbalance">{{filters.toFix(item.stable+item.pending)}}</view>
+    </view>
+  </view>
+</view>
+
+<!--没有钱包、导入或者创建-->
+<view wx:if='{{ !haswallet }}' class='container'>
+  <view class="nowallet">
+    <view class='title'>{{language.nowallet}}</view>
+    <view class='desc'>{{}}</view>
+  </view>
+  <navigator url="/pages/wallet/import">
+    <button type="default" class='btn'>{{language.importwal}}</button>
+  </navigator>
+  <navigator url="/pages/wallet/create">
+    <button type="default" class='btn'>{{language.createwal}}</button>
+  </navigator>
+</view>

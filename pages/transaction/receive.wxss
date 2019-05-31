@@ -1,0 +1,204 @@
+/* pages/transaction/receive.wxss */
+page {
+  background-color: #f5f6f7;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.qrcodeImg_box {
+  width: 550rpx;
+  height: 550rpx;
+  margin: auto;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  border-radius: 50rpx;
+  justify-content: center;
+}
+.qrcodeImg_box image {
+  width: 500rpx;
+  height: 500rpx;
+  border-radius: 50rpx;
+}
+
+/*弹窗  */
+.drawer_screen {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: #000;
+    opacity: 0.5;
+    overflow: hidden;
+}
+
+/*content*/
+
+.drawer_box {
+    width: 600rpx;
+    overflow: hidden;
+    position: fixed;
+    z-index: 1001;
+    background: #fafafa;
+    border-radius: 13px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.drawer_title {
+    padding: 15px;
+    /* font: 20px "microsoft yahei"; */
+    text-align: center;
+    color: #0a5258;
+}
+
+.drawer_content {
+    height: 250rpx;
+    overflow-y: scroll; /*超出父盒子高度可滚动*/
+}
+
+.fan{
+    width: 400rpx;
+    height: 80rpx;
+    background: #fff;
+    padding-left: 20rpx;
+    border-radius: 15rpx;
+    margin: 0px auto;
+    font-size: 30rpx; 
+    border: 1rpx solid #ddd;
+}
+.back_btn{
+    width: 250rpx;
+    background: #1d61a5;
+    height: 100rpx;
+    margin-top: 20rpx;
+    color: #fff;
+    
+}
+.content {
+  margin: 30rpx auto;
+  width: 640rpx;
+  height: 80%; 
+  background-color: #269FD6;
+  border-radius: 20rpx;
+  font-size: 30rpx;
+  color: #fff;
+  padding: 30rpx;
+  position: relative;
+  box-shadow: 10rpx 10rpx 5px #ccc;
+}
+.gatheringAddress_box {
+  font-size: 26rpx;
+}
+
+
+
+page{
+  background-color: #363c4a;
+}
+
+.qrcontainer{
+  margin-left: auto;
+  margin-right:auto;
+  margin-top:60px;
+  background-color: #3e88c4;
+  height:700rpx;
+  width:660rpx;
+  border-radius: 12px;
+}
+
+.qrcontainer .logo
+{
+  text-align: center;
+}
+.qrcontainer .logo image{
+  border-radius: 50%;
+  border:3px solid #fff;
+  width:50px;
+  height:50px;
+  margin-top:-25px;
+  z-index: 9;
+}
+
+.qrcontainer .topbanner{
+  color: #555555;
+  height:100rpx;
+  width:100%;
+}
+.qrcontainer .topbanner .assetname{
+  color:#fff;
+  font-size: medium;
+  text-align: center;
+  line-height: 1.6em;
+  font-weight: bold;
+}
+.qrcontainer .topbanner .address{
+  text-align: center;
+  color:#fff;
+  font-size: x-small;
+  display: inline-flex;
+  justify-content:center;
+  width:100%;
+}
+
+.qrcontainer .topbanner .address .iconcopy{
+  width:16px;
+  height:16px;
+  margin-left:2px;
+}
+
+.qrcontainer .qrbox{
+  background-color:#fff;
+  width:100%;
+  border-radius: 0px 0px 12px 12px;
+}
+
+.qrcontainer .qrbox .tipscan{
+  font-size: medium;
+  color: #172838;
+  text-align: center;
+  line-height: 1.6em;
+  padding-top:20px;
+}
+.qrcontainer .qrbox .imgbox{
+  margin-left: auto;
+  margin-right:auto;
+  text-align: center;
+}
+.qrcontainer .qrbox .imgbox image{
+  width:400rpx;
+  height: 400rpx;
+  text-align: center;
+}
+
+.qrcontainer .qrbox .gatheringMoney{
+  line-height: 1.6em;
+  font-size: small;
+  color: #3e88c4;
+  text-align: center;
+}
+
+.qrcontainer .qrbox .setmoney
+{
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    padding-bottom: 10px;
+}
+
+.qrcontainer .qrbox .setmoney .setmoney__item{
+    -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  text-align: center;
+  padding:10px;
+    line-height: 1.6em;
+  font-size: small;
+  color: #3e88c4;
+}

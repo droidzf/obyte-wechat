@@ -1,0 +1,66 @@
+<!--pages/wallet/mnemonic.wxml-->
+
+
+<view class='page'>
+  <view class='page__hd'>
+    <view class='weui-flex'>
+      <view class='pagelogo'>
+        <image src="/images/seedIcon.png" />
+      </view>
+      <view>
+        <view class='title'>助记词</view>
+        <view class='subtitle'>非常重要！请务必妥善保管。</view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 内容部分 -->
+  <view class="page__bd page__bd_spacing">
+    <view class='content' wx:if='{{ command }}'>
+
+      <view class='prompt'>
+        <view class="weui-flex item-hd" >
+          <view class="weui-flex__item color-red">重要提示</view>
+        </view>
+        <view class="weui-flex item-bd">
+          <view class="weui-flex__item" style='font-size:small'><text selectable='true'>助记词包含你的obyte商票内的全部私钥。请按顺序写下这12个单词，并将其安全的脱机存储。此密钥能够恢复你的obyte票夹并能支配票夹内的全部资产。</text></view>
+        </view>
+      </view>
+
+
+      <view class='words'>
+        <view class="weui-flex item-hd">
+          <view class="weui-flex__item">票夹助记词</view>
+          <image bindtap='copyMnemonic' class="kind-list__img" src="/images/icons/grey-copy-x32.png"></image>
+        </view>
+
+        <view class="weui-flex item-bd">
+          <view class="weui-flex__item color-gold">{{ command }}</view>
+        </view>
+
+      </view>
+
+      <view class='tips'>删除助记词不影响obyte票夹的正常使用，但如果要恢复票夹时必须使用助记词，在删除前一定要记下这些单词</view>
+      <view>
+        <button class='btnDelete'  bindtap='deleteMnemonic'>删除助记词</button>
+      </view>
+
+    </view>
+
+
+    <view class='content' wx:if='{{ !command }}'>
+      <view class='prompt'>
+        <view class="weui-flex item-hd" >
+          <view class="weui-flex__item color-red">助记词已清除</view>
+        </view>
+        <view class="weui-flex item-bd">
+          <view class="weui-flex__item" style='font-size:small'><text selectable='true'>本设备中没有存储你的商票助记词。</text></view>
+        </view>
+      </view>
+    </view>
+
+  </view>
+
+
+
+</view>

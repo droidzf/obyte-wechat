@@ -1,0 +1,50 @@
+/* pages/wallet/import.wxss */
+
+.container {
+  padding: 30rpx 30rpx;
+}
+
+.title{
+  font-size: large;
+  color:#555555;
+}
+
+#getshell {
+  width: 600rpx;
+  height: 100rpx;
+  margin: auto;
+}
+.recover_btn {
+  background: #269FD6;
+  color: #fff;
+  width: 400rpx;
+  margin-top: 50rpx;
+}
+.inputs {
+  display: flex;
+  flex-wrap: wrap;
+}
+.inputs input {
+  width: 152rpx; 
+  padding: 10rpx;
+  box-sizing: border-box;
+  margin: 20rpx 10rpx;
+  border-radius: 10rpx;
+  border: 0;
+  font-size: 32rpx;
+  vertical-align:middle;
+  box-shadow: 2rpx 2rpx 5px #ccc;
+  text-align: center;
+}
+
+.words {
+  background-color:#97d8f5;
+  padding:10px;
+  line-height: 1.6em;
+  word-spacing: 10px;
+  word-break:break-word;
+  text-align:  justify;
+  border-radius: 3px;
+  box-shadow: 1px 1px 1px 1px rgba(60,64,67,.15);
+  box-sizing: border-box;
+}
